@@ -44,7 +44,7 @@ maps
 
 #filter out the year and convert the longitude to the proper unit.
 maps1<-maps%>%filter(loc.year==2018) %>% mutate(longitude = loc.long/10^7)
-maps2<-maps%>%filter(loc.year==2019) %>% mutate(longitude = loc.long/10^7)
+
 
 #choose the 10. measurement of each day. not very elegant, but good enough.
 maps1_a<- maps1 %>% group_by(loc.date) %>% 
@@ -194,7 +194,7 @@ activities_2 <- data.frame(main_activity = main_activity,
                            time = as.POSIXct(as.numeric(df$timestampMs)/1000, origin = "1970-01-01"))
 
 head(activities_2)
-#####################333
+####################
 
 ggplot(activities_2, aes(x = main_activity, group = main_activity, fill = main_activity)) + 
   geom_bar()  + 
