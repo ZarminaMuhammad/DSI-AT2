@@ -195,7 +195,6 @@ activities_2 <- data.frame(main_activity = main_activity,
 
 head(activities_2)
 #####################333
-TEST
 
 ggplot(activities_2, aes(x = main_activity, group = main_activity, fill = main_activity)) + 
   geom_bar()  + 
