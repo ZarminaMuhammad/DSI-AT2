@@ -194,7 +194,8 @@ activities_2 <- data.frame(main_activity = main_activity,
                            time = as.POSIXct(as.numeric(df$timestampMs)/1000, origin = "1970-01-01"))
 
 head(activities_2)
-#######################333
+#####################333
+TEST
 
 ggplot(activities_2, aes(x = main_activity, group = main_activity, fill = main_activity)) + 
   geom_bar()  + 
